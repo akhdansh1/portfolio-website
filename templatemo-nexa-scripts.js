@@ -264,29 +264,29 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     submitBtn.disabled = true;
     
     // Send email using EmailJS
-    emailjs.sendForm('service_ptz8bfo', '__ejs-test-mail-service__', this)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            
-            // Show success message
-            alert('✅ Message sent successfully! I will get back to you soon.');
-            
-            // Reset form
-            document.getElementById('contact-form').reset();
-            
-            // Reset button
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-            submitBtn.disabled = false;
-        }, function(error) {
-            console.log('FAILED...', error);
-            
-            // Show error message
-            alert('❌ Failed to send message. Please try again or email me directly at akhdanshalahudin@gmail.com');
-            
-            // Reset button
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-            submitBtn.disabled = false;
-        });
+emailjs.sendForm('service_tiypopk', 'template_py1x0gb', this)
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        
+        // Show success message
+        alert('✅ Message sent successfully! I will get back to you soon.');
+        
+        // Reset form
+        document.getElementById('contact-form').reset();
+        
+        // Reset button
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+        submitBtn.disabled = false;
+    }, function(error) {
+        console.log('FAILED...', error);
+        
+        // Show error message
+        alert('❌ Failed to send message. Please try again or email me directly at akhdanshalahudin@gmail.com');
+        
+        // Reset button
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+        submitBtn.disabled = false;
+    });
 });
